@@ -1,0 +1,21 @@
+<button
+  [ngClass]="{
+    'btn-primary': type === 'primary',
+    'btn-secondary': type === 'secondary',
+    'btn-link': type === 'link'
+  }"
+  [class]="customClasses"
+  [disabled]="disabled"
+>
+  {{ label }}
+  <ng-container *ngIf="withIcon">
+    <fa-icon
+      [icon]="faChevronRight"
+      [ngClass]="{
+        'icon-sm': customClasses.includes('icon-sm'),
+        'icon-md': customClasses.includes('icon-md'),
+        'icon-lg': customClasses.includes('icon-lg')
+      }"
+    ></fa-icon>
+  </ng-container>
+</button>

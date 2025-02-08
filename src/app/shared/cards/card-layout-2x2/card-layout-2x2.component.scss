@@ -1,0 +1,52 @@
+.component-container {
+    .layout-flex {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card-border-wrap {
+            position: relative;
+            width: calc(50% - 10px); /* 50% width minus half the gap */
+            border-radius: 30px;
+            overflow: visible;
+            transition: all .2s ease-in-out;
+            transform:translateY(0px);
+            /* Border using ::before */
+            &::before {
+                content: "";
+                position: absolute;
+                inset: -2px; /* Expand slightly to show the border */
+                border-radius: inherit;
+                background: linear-gradient(45deg, #917eff, #a130ce);
+                padding: 2px; /* Border thickness */
+                box-sizing: border-box;
+                z-index: -1; /* Ensure it stays behind the card */
+                -webkit-mask: 
+                  linear-gradient(#000 0 0) content-box, 
+                  linear-gradient(#000 0 0);
+                -webkit-mask-composite: exclude;
+                mask-composite: exclude;
+                pointer-events: none; /* Prevent interaction */
+            }
+
+            /* Shadow Effect on Hover */
+            &:hover {
+                transform:translateY(-6px);
+                .card {
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+            }
+        }
+
+        .card {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            border-radius: 28px; /* Slightly smaller than wrap to fit */
+            pointer-events: auto;
+            z-index: 1; /* Ensure the card is above the border */
+            transition: all .2s ease-in-out;
+        }
+    }
+}

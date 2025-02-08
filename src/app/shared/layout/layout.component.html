@@ -1,0 +1,49 @@
+<app-background-animation-three></app-background-animation-three>
+<header>
+    <div class="grid-container">
+        <div class="header-content">
+            <div class="information-container">
+                <div class="image-container">
+                    <img src="/assets/img/imsprofilepic.jpeg" alt="Ims Profile Picture" />
+                </div>
+                <div class="role-group">
+                    <p class="text-m">Ims Storm van Leeuwen</p>
+                    <p class="text-xs">Full Stack Developer</p>
+                </div>
+            </div>
+            <nav>
+                <!-- We don't need router links at the moment -->
+                <!--
+                <a routerLink="/" routerLinkActive="active">Home</a>
+                <a routerLink="/about" routerLinkActive="active">About</a>
+                <a href="#contact">Contact</a>
+                -->
+                <!-- But we DO want some links to socials -->
+                <div class="social-links">
+                    <fa-icon class="fa-xl" [icon]="faGithub"></fa-icon>
+                    <fa-icon class="fa-xl" [icon]="faLinkedin"></fa-icon>
+                    <fa-icon class="fa-xl" [icon]="faInstagram"></fa-icon>
+                </div>
+            </nav>
+        </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="grid-container">
+        <div class="container">
+        <router-outlet></router-outlet>
+        </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="grid-container">
+        <div class="footer-content">
+            <p>
+            &copy; 2025 - Made with love by <span style="text-decoration:underline;">Ims Storm van Leeuwen</span>
+            </p>
+        </div>
+    </div>
+  </footer>
+  
