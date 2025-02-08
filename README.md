@@ -1,5 +1,3 @@
-# [Github Pages Link](https://whimsicalcodingman.github.io/animated-broccoli)
-
 # PortfolioApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
