@@ -15,20 +15,30 @@
     </p>
 
     <app-button
-      class="btn btn-link underline"
-      label="Look at my skills"
-      type="link"
-      [withIcon]="true"
-      customClasses="text-xl icon-sm"
-      annotationPadding="0"
-      annotationDelay="2000"
+    class="btn-link underline"
+    label="Look at my skills"
+    type="link"
+    link="#skills-section"
+    [withIcon]="true"
+    customClasses="text-xl icon-sm text-color-primary"
+    annotationPadding="0"
+    annotationDelay="2000"
     ></app-button>
+
   </div>
+
+  <div class="height-50"></div>
+
   <div class="card-layout">
+    <h2 class="text-3xl mb-0">
+      <span class="kepler bold italic" annotationPadding="-5">Projects</span>
+    </h2>
     <app-card-layout-2x2></app-card-layout-2x2>
   </div>
 
-  <div class="skills-section mt-8 mb-8">
+  <div class="height-50"></div>
+
+  <div id="skills-section" class="skills-section">
     <h2 class="text-3xl mb-0">
       <span class="kepler bold italic underline" annotationPadding="-5">Core development skills</span>
     </h2>
@@ -40,8 +50,8 @@
         <li><strong>Databases:</strong> MongoDB, MySQL</li>
       </ul>
 
-    <h2 class="text-2xl mb-0">
-      Optimization & Analytics
+    <h2 class="text-3xl mb-0">
+      <span class="kepler bold italic underline" annotationPadding="-5">Optimization & Analytics</span>
     </h2>
     <ul class="text-m mt-2">
       <li><strong>CRO & SEO:</strong> Conversion Optimization (CRO), Technical SEO, Lighthouse Audits</li>
@@ -49,13 +59,15 @@
       <li><strong>A/B Testing:</strong> Running & implementing A/B experiments</li>
     </ul>
 
-    <h2 class="text-2xl mb-0">
-      Creative & Design Workflow
+    <h2 class="text-3xl mb-0">
+      <span class="kepler bold italic underline" annotationPadding="-5">Creative & Design Workflow</span>
     </h2>
     <ul class="text-m mt-2">
       <li><strong>Adobe Creative Cloud:</strong> Photoshop, Illustrator, After Effects</li>
       <li><strong>Collaboration:</strong> Figma, Zeplin, Bugherd, Monday</li>
     </ul>
   </div>
+
+  <div class="height-50"></div>
 
 </section>

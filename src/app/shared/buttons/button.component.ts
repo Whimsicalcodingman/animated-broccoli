@@ -11,15 +11,13 @@ import { faChevronRight, IconDefinition } from '@fortawesome/free-solid-svg-icon
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
+  @Input() link?: string;
   @Input() label!: string;
   @Input() type: 'primary' | 'secondary' | 'link' = 'primary';
   @Input() disabled: boolean = false;
   @Input() withIcon: boolean = false;
   @Input() iconSize: 'sm' | 'md' | 'lg' = 'md';
-
-  // Default icon for the button
-  faChevronRight: IconDefinition = faChevronRight;
-
-  // Pass any additional classes from the parent to the inner button
+  @Input() target: '_self' | '_blank' | '_parent' | '_top' = '_self';
   @Input() customClasses: string = '';
+  faChevronRight: IconDefinition = faChevronRight;
 }

@@ -1,4 +1,4 @@
-button {
+button, a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -35,11 +35,7 @@ button {
   
     /* Utility classes for font colors */
     &.text-color-primary {
-      color: #007bff;
-  
-      &:hover {
-        color: #0056b3;
-      }
+      color: #313131;
     }
   
     &.text-color-secondary {

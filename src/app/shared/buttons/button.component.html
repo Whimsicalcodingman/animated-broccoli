@@ -1,21 +1,40 @@
-<button
+<!-- Render as an <a> if a link is provided -->
+  <a *ngIf="link"
+  [href]="link"
+  [target]="target"
+  [class]="customClasses"
   [ngClass]="{
     'btn-primary': type === 'primary',
     'btn-secondary': type === 'secondary',
     'btn-link': type === 'link'
-  }"
-  [class]="customClasses"
-  [disabled]="disabled"
->
-  {{ label }}
-  <ng-container *ngIf="withIcon">
-    <fa-icon
-      [icon]="faChevronRight"
-      [ngClass]="{
-        'icon-sm': customClasses.includes('icon-sm'),
-        'icon-md': customClasses.includes('icon-md'),
-        'icon-lg': customClasses.includes('icon-lg')
-      }"
-    ></fa-icon>
-  </ng-container>
+  }">
+ {{ label }}
+ <ng-container *ngIf="withIcon">
+   <fa-icon [icon]="faChevronRight"
+            [ngClass]="{
+              'icon-sm': iconSize === 'sm',
+              'icon-md': iconSize === 'md',
+              'icon-lg': iconSize === 'lg'
+            }"></fa-icon>
+ </ng-container>
+</a>
+
+<!-- Render as a <button> if no link is provided -->
+<button *ngIf="!link"
+       [disabled]="disabled"
+       [class]="customClasses"
+       [ngClass]="{
+         'btn-primary': type === 'primary',
+         'btn-secondary': type === 'secondary',
+         'btn-link': type === 'link'
+       }">
+ {{ label }}
+ <ng-container *ngIf="withIcon">
+   <fa-icon [icon]="faChevronRight"
+            [ngClass]="{
+              'icon-sm': iconSize === 'sm',
+              'icon-md': iconSize === 'md',
+              'icon-lg': iconSize === 'lg'
+            }"></fa-icon>
+ </ng-container>
 </button>

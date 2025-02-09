@@ -32,13 +32,13 @@ export class LayoutComponent {
         const annotation = annotate(element as HTMLElement, { 
           type: 'underline', 
           color: '#FFD54F', 
-          padding: padding 
+          padding: padding, 
         });
         setTimeout(() => {
           annotation.show();
         }, delay);
       },
-        { margin: '0px 0px -200px 0px', amount: 0.2 }
+        { margin: '0px 0px -100px 0px', amount: 0.2 }
       )
     });
     
