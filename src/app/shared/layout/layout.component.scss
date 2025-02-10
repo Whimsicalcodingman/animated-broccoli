@@ -1,3 +1,5 @@
+@use '../../../styles.scss' as *;
+
 :host {
   display: flex;
   flex-direction: column;
@@ -28,7 +30,7 @@
         width:100%;
         margin:10px auto;
         border-radius:50px;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
         transition: all .2s;
         animation: hue-shift 5s infinite linear;
         @keyframes hue-shift {
@@ -136,7 +138,7 @@
     width:100%;
     margin:10px auto;
     border-radius:50px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
     transition: all .2s;
     animation: hue-shift 5s infinite linear;
     @keyframes hue-shift {
@@ -158,25 +160,11 @@
       }
     }
   }
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: start;
 
-      nav {
-        margin-top: 0.5rem;
-        flex-wrap: wrap;
-        gap: 1rem;
-
-        a {
-          display: block;
-        }
-      }
-    }
-
-    main {
-      padding: 1rem;
+  @media (max-width: $tablet-md) {
+    header, footer, main {
+      padding: 0 14px;
+      width:auto;
     }
   }
 }

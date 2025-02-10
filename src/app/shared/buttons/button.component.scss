@@ -75,22 +75,27 @@ button, a {
         text-decoration: none;
       }
     }
-  
-    /* Shared icon styles */
     fa-icon {
       margin-left: 0.3rem;
       transition: all 0.2s ease-in-out;
-  
-      &.icon-sm {
-        font-size: 0.75rem;
+      display:flex;
+      &.xxs {
+        font-size: 0.5rem;
       }
-  
-      &.icon-md {
-        font-size: 1rem;
+      &.xs {
+        font-size: 0.75rem; /* 12px */
       }
-  
-      &.icon-lg {
-        font-size: 1.25rem;
+    
+      &.sm {
+        font-size: 0.875rem; /* 14px */
+      }
+    
+      &.md {
+        font-size: 1rem; /* 16px */
+      }
+    
+      &.lg {
+        font-size: 1.25rem; /* 20px */
       }
     }
   }

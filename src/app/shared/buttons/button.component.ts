@@ -16,8 +16,9 @@ export class ButtonComponent {
   @Input() type: 'primary' | 'secondary' | 'link' = 'primary';
   @Input() disabled: boolean = false;
   @Input() withIcon: boolean = false;
-  @Input() iconSize: 'sm' | 'md' | 'lg' = 'md';
+  @Input() iconSize: 'xs' | 'sm' | 'md' | 'lg' = 'md'; // Controls icon size
   @Input() target: '_self' | '_blank' | '_parent' | '_top' = '_self';
   @Input() customClasses: string = '';
+
   faChevronRight: IconDefinition = faChevronRight;
 }

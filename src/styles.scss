@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+$screen-lg: 1920px;
+$screen-md: 1440px;
+$tablet-lg: 1024px;
+$tablet-md: 768px;
+$tablet-s: 600px;
+$phone-lg: 414px;
+$phone-md: 360px;
+
 :root {
   font-family: 'Inter Tight', sans-serif;
 }

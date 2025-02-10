@@ -11,11 +11,7 @@
  {{ label }}
  <ng-container *ngIf="withIcon">
    <fa-icon [icon]="faChevronRight"
-            [ngClass]="{
-              'icon-sm': iconSize === 'sm',
-              'icon-md': iconSize === 'md',
-              'icon-lg': iconSize === 'lg'
-            }"></fa-icon>
+            [class]="iconSize"></fa-icon>
  </ng-container>
 </a>
 
@@ -31,10 +27,6 @@
  {{ label }}
  <ng-container *ngIf="withIcon">
    <fa-icon [icon]="faChevronRight"
-            [ngClass]="{
-              'icon-sm': iconSize === 'sm',
-              'icon-md': iconSize === 'md',
-              'icon-lg': iconSize === 'lg'
-            }"></fa-icon>
+            [class]="iconSize"></fa-icon>
  </ng-container>
 </button>
